@@ -1,0 +1,16 @@
+<?
+$fsarmy=Array();
+$fsarmy[12]++;
+$fsarmy[1]++;
+$fsarmy[2]++;
+$fsarmy[11]++;
+$fsarmy[34]++;
+$fsarmy[22]++;
+$fsarmy[15]++;
+$fsarmy[123]++;
+$fsarmy[32]++;
+$fsarmy[11]++;
+$fsarmy[2]++;
+$fsarmy[12]++;
+print_r($fsarmy);
+?>

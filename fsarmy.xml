@@ -1,0 +1,27 @@
+<?xml version='1.0' standalone='yes'?>
+<armys>
+ <army>
+   <from>1</from>
+   <mass>2</mass>
+ </army>
+ <army>
+   <from>3</from>
+   <mass>2</mass>
+ </army>
+ <army>
+   <from>5</from>
+   <mass>2</mass>
+ </army>
+ <army>
+   <from>10</from>
+   <mass>12</mass>
+ </army>
+ <army>
+   <from>2</from>
+   <mass>2</mass>
+ </army>
+ <army>
+   <from>1</from>
+   <mass>2</mass>
+ </army>
+</armys>

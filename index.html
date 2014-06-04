@@ -1,0 +1,938 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>独立自治区域・貿易諸島　操作マニュアル</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=shift_jis">
+<LINK REL="stylesheet" TYPE="text/css" HREF="./hako.css"></HEAD>
+
+<BODY text=#002300 bgColor=#E3FFED>
+
+<a NAME="top"><FONT COLOR="#A900FF"><H1>独立自治区域・貿易諸島</H1></a></font>操作マニュアル<BR>
+<HR>
+<BR>箱庭諸島における外交の重要さを増す改造がなされているものです｡<BR>
+具体的には、<BR><BR>
+・各種開発には[資金]のほかに[建材]が必要です｡<BR>
+・工場、農場、市場など、産業の操業には[燃料]が必要です。<BR>
+・ミサイル発射には[砲弾][燃料]が必要です｡<BR>
+・[砲弾]は、[鉄鋼][弾薬][燃料]から作成します｡<BR>
+・[鉄鉱][採石場][炭坑][ウラン鉱][銀山]は、山にしか作ることができません｡<BR>
+・農場、工場、市場が全産業に占める割合が多いと、生産にボーナスがつきます｡<BR>
+★概略表示について<BR>
+０(単位)：皆無　～１００：欠乏　～１０００：普通　～１００００：潤沢　１００００～：底無<BR><BR>
+尚、これからの説明は箱庭諸島２の基本的なルールを理解しているものとして進めます。<BR>
+<HR>
+<a href="#Js">【Ｊｓ版追加事項】</a><a href="#com">【コマンド説明】</a>
+<HR>
+<BR>
+<B><FONT size=+1 COLOR="#A900FF">●ローカルルール</FONT></B>（<FONT color="red"><b>必読</b></FONT>）<BR>
+<BR>
+・
+<b>【<FONT COLOR="red">禁止事項</FONT>】<BR><BR>
+・重複登録は全面的に禁止</B>です♪<BR>
+<BR><BR>
+
+<a NAME="Js"><HR></a>
+<a href="#top">【ローカルルール】</a><a href="#com">【コマンド説明】</a>
+<HR>
+<BR>
+<B><FONT size=+1 COLOR="#A900FF">★Ｊｓ版追加事項</FONT></B>（<FONT color="red"><b>必読</b></FONT>）<BR>
+<BR>
+<b>【<FONT COLOR="red">Js開発画面操作説明</FONT>】</b><BR><BR>
+・基本的には通常の開発画面と変りませんが、操作系は簡単です♪<BR>
+　当然ながらJavaScriptが使用できる状態で無ければいけません♪（笑）<BR><BR>
+・ダイレクト入力モード♪<BR>
+　ＭＡＰ上の好きな位置をクリックして見てください♪<BR>
+　通常モードならただその座標を選択するだけですがJsモードでは直接開発計画が表示されて、それを選択すればコマンドリストに挿入されます♪<BR><BR>
+・座標指定だけしたい時は♪<BR>
+　開発計画と書いてある所の上の部分の非表示にチェックをつけてください♪<BR>
+　ＭＡＰをクリックしても開発計画が表示されなくなります♪<BR><BR>
+・普通の入力は♪<BR>
+　計画を選んでその計画を入力したい所を選択して上の挿入・上書きなどのボタンを押してみてください♪<BR>
+　通常モードとは違って計画が送信されずに右の計画欄の色が白に変って未送信と表示されるはずです♪<BR>
+　調子に乗ってバンバン計画を入力しちゃってください♪<br>
+　コマンド移動と書いてある所の▲や▼を押す事で現在選択している所の計画をずらす事が出来ます♪<BR>
+　コマンドを入力し終わったら最後に忘れずに計画送信ボタンを押してください♪<BR>
+　右のコマンドリストが緑色になって送信済みと表示されていれば成功です♪<BR><BR>
+・注意点は♪<BR>
+　通常モードとは違って入力するたびに数量が０にならないので、数量指定したあとは次の計画の入力時に気おつけてください♪<BR><BR>
+・自動入力系計画って♪<BR>
+　自動入力系計画は右側のコマンドリストの上のリストから選んで入力できます♪<BR>
+　ただし、コマンドが送信済みになっている事を確認してから入力してください♪<BR>
+　そうしないと、せっかく入力したものが送信されなくなってしまいます♪<BR><BR>
+・埋めたて＋整地って♪<BR>
+　○○＋○○自動入力というのはそのままの効果です♪（笑）<BR>
+　埋めたて＋整地なら埋めたてを２回と整地をまとめて入力してくれます♪<BR>
+　ちなみに、埋めたて自動入力と言うのは浅瀬全部に埋め立てを入力するというものです♪<BR>
+　自動入力系は入力は無料ですがコマンド実行時にはちゃんとその計画分の資源が消費されるのでご注意♪<BR><BR>
+・全計画を白紙にするって♪<BR>
+　実は、選んでいる計画番号よりも下のものにだけ効果があります♪<BR>
+　計画番号５番を選んでいれば計画番号６以降だけが削除されると言うことです♪<BR><BR>
+<b>【<FONT COLOR="red">目標補足モード</FONT>】</b><BR><BR>
+・目標の島を選ぶ所にある表示をクリックするとその目標の島が別画面で表示されます♪<BR>
+　そこでＭＡＰをクリックする事により直接座標を入力する事が出来ます♪<BR><BR>
+<b>【<FONT COLOR="red">オーナー名入力</FONT>】</b><BR><BR>
+・島のオーナー名を入力しておく事が出来ます♪<BR>
+　是非とも利用して見てくださいね♪<BR><BR>
+<b>【<FONT COLOR="red">画像ローカル設定</FONT>】</b><BR><BR>
+・画像をハードディスクから読み出して表示する事が可能です♪<BR>
+　画像表示が超高速になってサーバー負荷も軽減されるので是非とも設定してください♪
+　自分だけ他人とは違う画像でやると言う荒業も可能です♪（笑）<BR><BR>
+<b>【<FONT COLOR="red">ログのＨＴＭＬ化</FONT>】</b><BR><BR>
+・最近の出来事が毎ターンＨＴＭＬによって出力されます♪<BR>
+　最近の出来事と書いてある所をクリックする事によりそれを見ることが出来ます♪<BR>
+　毎回のアクセス毎にＣＧＩからＴＯＰページに精製する必要がなくなったのでとても快適です♪<BR><BR>
+<b>【<FONT COLOR="red">登録画面分離</FONT>】</b><BR><BR>
+・島の登録・設定画面を分離したのでＴＯＰページがすっきりとしています♪<BR><BR>
+<b>【<FONT COLOR="red">管理人からのプレゼント</FONT>】</b><BR><BR>
+・管理人から簡単に物資を送れるようになっています♪<BR>
+　定期的にそれを利用したイベントを開催する所もあるかも知れませんね♪<BR>
+　また、簡単に物資を回収する事も可能なのでちょこっとしたペナルティー＆罰ゲームに使われるかも知れません♪（笑）<BR><BR>
+<a NAME="com"><HR></a>
+<a href="#top">【ローカルルール】</a><a href="#Js">【Ｊｓ版追加事項】</a>
+<HR>
+<FONT size=+1 COLOR="#A900FF"><B>◎コマンド説明</B></FONT>　　　★＝補足説明あり 
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff>
+    <TH colSpan=2><FONT color=#f5f5f5>建設系コマンド</FONT></TH>
+    <TH width=44><FONT color=#f5f5f5>資金</FONT></TH>
+    <TH width=44><FONT color=#f5f5f5>建材</FONT></TH>
+    <TH width=34><FONT color=#f5f5f5>対象<BR>地形</FONT></TH>
+    <TH><FONT color=#f5f5f5>説明</FONT></TH>
+    <TH width=92><FONT color=#f5f5f5>最大規模</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>★農場整備</TD>
+    <TD align=right>１０</TD>
+    <TD align=right>１０</TD>
+    <TD>平地</TD>
+    <TD>１００００（増築　５０００）人規模の農場整備。</TD>
+    <TD align=right>５００００人</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>★工場建設</TD>
+    <TD align=right>１００</TD>
+    <TD align=right>５０</TD>
+    <TD>平地</TD>
+    <TD>３００００（増築１５０００）人規模の工場建設。</TD>
+    <TD align=right>１５００００人</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>★市場建設</TD>
+    <TD align=right>５０</TD>
+    <TD align=right>１０</TD>
+    <TD>平地</TD>
+    <TD>１００００（増築１００００）人規模の市場建設。</TD>
+    <TD align=right>１０００００人</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>★専門工場建設</FONT></TH>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>数量</FONT></TH>
+    <TD colSpan=2>　</TD>
+    <TD rowSpan=4>平地</TD>
+    <TD>数量指定で種類を決定</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>建材工場建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>０</B></FONT>)</TD>
+    <TD align=right>１５０</TD>
+    <TD align=right>５０</TD>
+    <TD>５０(増築３０)万トン規模の建材工場建設。</TD>
+    <TD>２００万トン</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>軍事工場建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>１</B></FONT>)</TD>
+    <TD align=right>５０</TD>
+    <TD align=right>１０</TD>
+    <TD>１０(増築１０)メガトン規模の軍事工場建設。</TD>
+    <TD>１５０メガトン</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>精製工場建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>２</B></FONT>)</TD>
+    <TD align=right>１５０</TD>
+    <TD align=right>１５０</TD>
+    <TD>２５０(増築１００)万ガロン規模の精製工場建設。</TD>
+    <TD>１２５０万ガロン</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>★ミサイル基地建設</FONT></TH>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>数量</FONT></TH>
+    <TD colSpan=2>　</TD>
+    <TD rowSpan=4>平地</TD>
+    <TD>数量指定で種類を決定</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>ミサイル基地建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>０</B></FONT>)</TD>
+    <TD align=right>３００</TD>
+    <TD align=right>１００</TD>
+    <TD>ミサイル基地を建設</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>偽装ミサイル基地建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>１</B></FONT>)</TD>
+    <TD align=right>５００</TD>
+    <TD align=right>１００</TD>
+    <TD>ミサイル基地を建設。森に偽装済み</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>ハリボテ建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>２</B></FONT>)</TD>
+    <TD align=right>１０</TD>
+    <TD align=right>１０</TD>
+    <TD>ミサイル基地に偽装したハリボテを建設。ターン消費なし</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>★防衛施設建設</FONT></TH>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>数量</FONT></TH>
+    <TD colSpan=2>　</TD>
+    <TD rowSpan=4>平地</TD>
+    <TD>数量指定で種類を決定　増設可能　最大規模を超えると自爆？</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>防衛施設建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>０</B></FONT>)</TD>
+    <TD align=right>５００</TD>
+    <TD align=right>３００</TD>
+    <TD>周囲２ヘクスを防御する施設を建設。</TD>
+    <TD>３レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>偽装防衛施設建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>１</B></FONT>)</TD>
+    <TD align=right>１５００</TD>
+    <TD align=right>３００</TD>
+    <TD>周囲２ヘクスを防御する施設を建設。森に偽装済み</TD>
+    <TD>３レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right>ハリボテ建設</TD>
+    <TD bgcolor="#E9E7FF" align=middle>(<FONT color=#4422cc><B>２</B></FONT>)</TD>
+    <TD align=right>１０</TD>
+    <TD align=right>１０</TD>
+    <TD>防衛施設に偽装したハリボテを建設。ターン消費なし</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>★海底基地建設</TD>
+    <TD align=right>１５００</TD>
+    <TD align=right>５００</TD>
+    <TD align=middle>海</TD>
+    <TD>通常のミサイルでは壊せないミサイル基地を建設</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>植林</TD>
+    <TD align=right>１００</TD>
+    <TD align=right>０</TD>
+    <TD>平地</TD>
+    <TD>木を１万本植える。ターン消費なし</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>油田整備</TD>
+    <TD align=right>３００</TD>
+    <TD align=right>５０</TD>
+    <TD>荒地</TD>
+    <TD>油田を整備。毎ターン５×レベル％の確率で石油を採取する</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" colSpan=2>耐震強化</TD>
+    <TD align=right>５０</TD>
+    <TD align=right>５０</TD>
+    <TD>工場</TD>
+    <TD>工場及び各種工場に耐震強化を施し、地震の影響を軽減する</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>★鉱山整備</FONT></TH>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>地形</FONT></TH>
+    <TD colSpan=2>　</TD>
+    <TD rowSpan=6>鉱山</TD>
+    <TD>各種の鉱山を整備する。対象地形の種類によってコストが異なる</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right colSpan=2>炭坑</TD>
+    <TD align=right>１００Ｌ</TD>
+    <TD align=right>５０Ｌ</TD>
+    <TD>最大１００×レベル×レベル万トンまでの石炭備蓄。</TD>
+    <TD>５レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right colSpan=2>採石場</TD>
+    <TD align=right>２５０Ｌ</TD>
+    <TD align=right>１００Ｌ</TD>
+    <TD>最大５０×レベル×レベル万トンまでの石材備蓄。</TD>
+    <TD>５レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right colSpan=2>鉄鉱山</TD>
+    <TD align=right>５００Ｌ</TD>
+    <TD align=right>５０Ｌ</TD>
+    <TD>最大５０×レベル×レベル万トンまでの鋼鉄備蓄。</TD>
+    <TD>５レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right colSpan=2>ウラン鉱山</TD>
+    <TD align=right>５００Ｌ</TD>
+    <TD align=right>１００Ｌ</TD>
+    <TD>最大　　１×レベル×レベル万トンまでのウラン備蓄。</TD>
+    <TD>５レベル</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF" align=right colSpan=2>銀山</TD>
+    <TD align=right>１００Ｌ</TD>
+    <TD align=right>１５０Ｌ</TD>
+    <TD>最大　５０×レベル×レベル万トンまでの銀備蓄。</TD>
+    <TD>５レベル</TD></TR></TBODY></TABLE><BR>※　鉱山整備のコストの欄にある&quot;Ｌ&quot;とはレベルの意です。また、このレベルとは整備前のレベルを指します。<BR>
+    ※　農場整備、工場建設、市場建設、鉱山整備は回数指定しておくことにより資源が続く限り指定ターンそのコマンドを実行します♪<BR><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>開発系コマンド</FONT></TH>
+    <TH><FONT color=#f5f5f5>値段</FONT></TH>
+    <TH><FONT color=#f5f5f5>物資</FONT></TH>
+    <TH><FONT color=#f5f5f5>説明</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">整地</TD>
+    <TD align=right>１０</TD>
+    <TD>　</TD>
+    <TD>荒地・建造物を平地にする</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">地ならし</TD>
+    <TD align=right>５０</TD>
+    <TD>　</TD>
+    <TD><FONT color=#ff0000>ターンを消費しない</FONT>整地。地震発生率増加</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">埋め立て</TD>
+    <TD align=right>１００</TD>
+    <TD>石材４５</TD>
+    <TD>海・浅瀬を埋め立てる</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">造成</TD>
+    <TD align=right>１５０</TD>
+    <TD>石材５０</TD>
+    <TD><FONT color=#ff0000>ターンを消費しない</FONT>埋め立て。津波発生率増加</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">掘削</TD>
+    <TD align=right>５０</TD>
+    <TD>　</TD>
+    <TD>土地を掘削し、浅瀬にする　海底油田は出ません</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">誘致活動</TD>
+    <TD align=right>１００</TD>
+    <TD>酒５０(１万人につき)</TD>
+    <TD>人口の増加を促進する。<FONT color=#ff0000>ターン消費なし</FONT></TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鉱脈探査</TD>
+    <TD align=right>５０</TD>
+    <TD>　</TD>
+    <TD>山に存在する鉱脈を調査する。要数量指定</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鉱山廃止</TD>
+    <TD align=right>１００</TD>
+    <TD>　</TD>
+    <TD>鉱山を廃止し、山に戻す。<FONT 
+color=#ff0000>ターン消費なし</FONT></TD></TR></TBODY></TABLE><BR>
+※　鉱脈探査の数量指定について（<FONT 
+color=red><b>重要！</b></FONT>）<BR>鉱脈を探査するには必ず数量指定が必要です。１０の位を「調査したい鉱脈」、１の位を「調査費用」と読みます。<BR>
+以下は対応表です(括弧内は成功率)<BR>
+<B>０～：ウラン(１％)　１０～：銀(２％)　２０～：鉄(５％)　３０～：石(１０％)　４０～：石炭(２０％)</B><BR>但し、一の位が[０]の場合、調査費用は１０として扱います。<BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>☆</TD>
+    <TD>例えば「石」を探査したいときには"数量"のところを３０～３９までに設定します。かかる費用は３０～３９までの１の位、つまり０～９を使い５０億円×「１の位の数」となります。（１の位が０の時は×１０）また、その時の発見確率は１０％×「１の位の数」です。<BR>
+    同じように数量を「２８」に設定した場合、１０の位が「２」なので探すものは「鉄」、費用は５０億円×８＝４００億円、発見確率は５％×８＝４０％になります。<BR>
+    １の位が０の時は１０として扱われます。調査費用は５０億円×１０となり発見確率もこれに準じます。<BR>
+    数量０の場合はウラン調査×１０になるのできちんと数量指定をして下さいね♪<br>
+    ちなみに５０以上の値は調査不能の為指定しないようにご注意♪</TD></TR></TBODY></TABLE><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff>
+    <TH><FONT color=#f5f5f5>生産系コマンド</FONT></TH>
+    <TH><FONT color=#f5f5f5>消費<BR>燃料</FONT></TH>
+    <TH><FONT color=#f5f5f5>物資</FONT></TH>
+    <TH><FONT color=#f5f5f5>説明</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">物資採掘</TD>
+    <TD align=right>５０</TD>
+    <TD>鉱山埋蔵量全部</TD>
+    <TD>各種鉱山に備蓄してある物資の約半分を入手</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">建材製造</TD>
+    <TD align=right>１０</TD>
+    <TD>石材１０</TD>
+    <TD>建材工場で建材１０万トンを製造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">建材強化</TD>
+    <TD align=right>１０</TD>
+    <TD>建材１０・鉄鋼１０</TD>
+    <TD>建材工場で建材２０万トンを製造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鋳造</TD>
+    <TD align=right>５</TD>
+    <TD>銀１０</TD>
+    <TD>建材工場で資金２０億円を鋳造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">砲弾製造</TD>
+    <TD align=right>１０</TD>
+    <TD>鉄鉱１０・弾薬５</TD>
+    <TD>軍事工場で砲弾１０メガトンを製造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">弾薬製造</TD>
+    <TD align=right>５</TD>
+    <TD>石油５０万バレル</TD>
+    <TD>軍事工場で弾薬５万トンを製造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">精製</TD>
+    <TD align=right>１０</TD>
+    <TD>石油５０万バレル</TD>
+    <TD>精製工場で燃料２５万ガロンを精製。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">醸造</TD>
+    <TD align=right>１０</TD>
+    <TD>食料５０００トン</TD>
+    <TD>精製工場で酒５０ガロンを醸造。労働力が必要</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">伐採</TD>
+    <TD align=right>０</TD>
+    <TD>資金１００</TD>
+    <TD>森林を伐採して木材にする</TD></TR></TBODY></TABLE><BR>※　労働力とは、島民１００００人です。未就労者ではなく総人口であることに注意！例えば建材を５０万トン製造するには総人口が５万人を超えている必要があります。<BR><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>攻撃系コマンド</FONT></TH>
+    <TH><FONT color=#f5f5f5>消費物資</FONT></TH>
+    <TH><FONT color=#f5f5f5>説明</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ミサイル発射</TD>
+    <TD>燃料１０・砲弾１０</TD>
+    <TD>誤差２のミサイルを発射</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ＰＰミサイル発射</TD>
+    <TD>燃料１０・砲弾２０</TD>
+    <TD>誤差１のミサイルを発射</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ＳＴミサイル発射</TD>
+    <TD>燃料５０・砲弾１０</TD>
+    <TD>誤差２の、ログに残らないミサイルを発射</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">陸地破壊弾発射</TD>
+    <TD>燃料１０・砲弾５０</TD>
+    <TD>誤差２の、着弾地点を水没させるミサイルを発射</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">怪獣派遣</TD>
+    <TD>資金１５００・鉄鋼１５００・燃料１５００</TD>
+    <TD>体力４の人造怪獣を建造し、派遣する。</TD>
+  </TR></TBODY></TABLE><BR>
+<HR>
+<FONT size=+1 COLOR="#A900FF"><B>◎物資・産業</B></FONT><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>物資</FONT></TH>
+    <TH><FONT color=#f5f5f5>初期設定</FONT></TH>
+    <TH><FONT color=#f5f5f5>収入</FONT></TH>
+    <TH><FONT color=#f5f5f5>消費</FONT></TH>
+    <TH><FONT color=#f5f5f5>最大保有量</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">資金</TD>
+    <TD>５００億円</TD>
+    <TD>市場</TD>
+    <TD>各種開発</TD>
+    <TD align=right>５００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">食料</TD>
+    <TD>５００００トン</TD>
+    <TD>農場</TD>
+    <TD><FONT color=#ff3300>１００人で５０</FONT></TD>
+    <TD align=right>１０００００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">商品</TD>
+    <TD>０億円相当</TD>
+    <TD>工場</TD>
+    <TD>市場</TD>
+    <TD align=right>５００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">銀</TD>
+    <TD>０トン</TD>
+    <TD>銀山</TD>
+    <TD>工場</TD>
+    <TD align=right>１００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">酒</TD>
+    <TD>０ガロン</TD>
+    <TD>精製工場</TD>
+    <TD>誘致活動</TD>
+    <TD align=right>１００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">木材</TD>
+    <TD>５００万トン</TD>
+    <TD>森</TD>
+    <TD>工場</TD>
+    <TD align=right>５００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">石材</TD>
+    <TD>５００万トン</TD>
+    <TD>採石場</TD>
+    <TD>埋め立て・建材製造・工場</TD>
+    <TD align=right>１００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鉄鋼</TD>
+    <TD>５００万トン</TD>
+    <TD>鉄鉱山</TD>
+    <TD>建材強化・砲弾製造・工場</TD>
+    <TD align=right>１００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">建材</TD>
+    <TD>５００万トン</TD>
+    <TD>建材工場</TD>
+    <TD>各種開発・建材強化・街の成長</TD>
+    <TD align=right>５００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">石油</TD>
+    <TD>１０００万バレル</TD>
+    <TD>油田</TD>
+    <TD>精製・弾薬製造</TD>
+    <TD align=right>１０００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">燃料</TD>
+    <TD>１０００万ガロン</TD>
+    <TD>炭坑・ウラン鉱山・精製工場</TD>
+    <TD>各種開発・産業の操業</TD>
+    <TD align=right>１０００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">砲弾</TD>
+    <TD>０メガトン</TD>
+    <TD>軍事工場</TD>
+    <TD>ミサイル発射</TD>
+    <TD align=right>１００００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">弾薬</TD>
+    <TD>０万トン</TD>
+    <TD>軍事工場</TD>
+    <TD>砲弾製造</TD>
+    <TD 
+align=right>１００００</TD></TR></TBODY></TABLE><BR>
+※　初期物資は始めから参加の方には多少の<B>ボーナス</B>がついています♪<BR>
+※　村の発生時、及び村から町へ、町から都市へ成長する時に<B>建材１０万トン</B>を消費します。<BR>
+※　木材がある場合、毎ターン少しずつ建材と商品が製造されるようになります。その際、燃料は消費しません。<br>
+（<FONT 
+color=red><b>重要！</b></FONT>）<BR><B>人口１００人につき１ターンに５０トン</B>の食料を消費します。したがって、最低でも<B>人口の５０％</B>は農場で働いていないと食料がだんだん減っていく計算になります。<BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>施設</FONT></TH>
+    <TH><FONT color=#f5f5f5>収入</FONT></TH>
+    <TH><FONT color=#f5f5f5>備考</FONT></TH>
+    <TH><FONT color=#f5f5f5>特化</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">工場</TD>
+    <TD>※「収入と消費」の項参照</TD>
+    <TD>※「収入と消費」の項参照</TD>
+    <TD>占有率７０％以上で生産高＋３％／１００００人</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">農場</TD>
+    <TD>１００トン／１００人</TD>
+    <TD>５万ガロン／１００００人の燃料を消費</TD>
+    <TD>占有率７０％以上で生産高＋５％／１００００人</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">市場</TD>
+    <TD>１億円／１０００人</TD>
+    <TD>３万ガロン／１００００人の燃料を消費</TD>
+    <TD>占有率７０％以上で生産高＋１％／１００００人</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">建材工場</TD>
+    <TD>　</TD>
+    <TD>建材製造・建材強化・鋳造</TD>
+    <TD rowSpan=10>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">精製工場</TD>
+    <TD>　</TD>
+    <TD>精製・醸造</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">軍事工場</TD>
+    <TD>　</TD>
+    <TD>砲弾製造・弾薬製造</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鉄鉱山</TD>
+    <TD>　</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">採石場</TD>
+    <TD>　</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ウラン鉱山</TD>
+    <TD>５００万ガロン／トン</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">炭坑</TD>
+    <TD>１万ガロン／万トン</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">銀山</TD>
+    <TD>　</TD>
+    <TD>　</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">森</TD>
+    <TD>６万トン／１万本</TD>
+    <TD>毎ターン１万本増加</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">油田</TD>
+    <TD>～５００万バレル／ターン</TD>
+    <TD>毎ターン５×レベル％で発見。枯渇率(１０－レベル)％(採取時に判定)</TD></TR></TBODY></TABLE><BR><FONT 
+size=+1 COLOR="#A900FF"><B>収入と消費</B></FONT>(<FONT 
+color=red><b>重要！</b></FONT>)<BR><BR>住民は働く場所があると勝手に働いてくれます。働く場所とは「農場」「工場」「市場」です。また、これらの働く場所には優先順位があり<B>農場→工場→市場</B>、の順に住民は流れていきます。例え工場があっても総人口が農場規模よりも少ないと、住民すべてが農場で働くことになり工場は稼動しません。同じ事が市場にも言えます。<BR><BR><B>１００人が農場で働く</B>と<B>１ターンに１００トン</B>の食料を得ることが出来ます。また<B>１００００人規模の農場</B>が１ターンに消費する燃料は<B>５万ガロン</B>です。<BR><B>１０００人が市場で働く</B>と<B>１ターンに商品１億円相当と引き換えに資金１億円</B>を得ることが出来ます。また<B>１００００人規模の市場</B>が１ターンに消費する燃料は<B>３万ガロン</B>です。<BR>工場の場合は少し複雑です。まずはこの表を見てください。 
+
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff>
+    <TH><FONT color=#f5f5f5>原料</FONT></TH>
+    <TH><FONT color=#f5f5f5>消費物資(１万人あたり)</FONT></TH>
+    <TH><FONT color=#f5f5f5>生産商品</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">銀</TD>
+    <TD>銀５トン・燃料１０万ガロン</TD>
+    <TD>商品１５億円相当（装飾品）</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">鋼鉄</TD>
+    <TD>鋼鉄１５万トン・燃料５０万ガロン</TD>
+    <TD>商品３０億円相当（工具）</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">石材</TD>
+    <TD>石材１０万トン・燃料２０万ガロン</TD>
+    <TD>商品１５億円相当（彫刻）</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">木材</TD>
+    <TD>木材１０万トン・燃料１０万ガロン</TD>
+    <TD>商品１０億円相当（家具）</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">なし</TD>
+    <TD>燃料１０万ガロン</TD>
+    <TD>商品　５億円相当（衣料）</TD></TR></TBODY></TABLE>優先順位は上の方が高くなります。銀がなければ鉄鋼、鉄鋼がなければ石材…という風に消費される原料が決まります。括弧内は製造される品目ですが、ゲーム中では特に関係ありません。<BR><BR><FONT 
+size=+1 COLOR="#A900FF"><B>特化</B></FONT>（<FONT 
+color=red><b>重要！</b></FONT>）<BR><BR>特化とは「農場」「工場」「市場」のいずれかが規定値の占有率を超えたときにつく生産ボーナスのことです。占有率の出し方は"各産業規模÷（農場規模＋工場規模＋市場規模）"でこれが規定値を超えている産業は特化されていると言えます。鉱山や各専門工場は特化に関しては関係ありません。<BR>特化されてる場合につくボーナスは<B>総人口</B>で決まります。例えプ～太郎が沢山居たとしても総人口分のボーナスがつきます。農場の場合は１万人×５％、工場の場合は１万人×３％、市場の場合は１万人×１％、の生産ボーナスがつきます。また、ボーナスで生産量が増えても<B>消費される原料は特化してない場合と同じ</B>です。<BR><BR><FONT 
+size=+1 COLOR="#A900FF"><B>鉱山の埋蔵量と採掘</B></FONT><BR><BR>鉱山の埋蔵量は埋蔵係数によって決まります。埋蔵係数の出し方は、鉱山レベル－［現埋蔵係数－鉱山レベル］（備考：[ｘ](ガウス記号)は、ｘを超えない最大の整数を返します）ですが、これだけではわかりにくいと思うので、わかりやすくしたものが下の表です。 
+
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff>
+    <TD colSpan=2 rowSpan=2>　</TD>
+    <TH colSpan=11><FONT color=#f5f5f5>ターンの進行→</FONT></TH></TR>
+  <TR bgColor=#ff8888>
+    <TH width=45><FONT color=#f5f5f5>１</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>２</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>３</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>４</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>５</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>６</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>７</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>８</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>９</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>１０</FONT></TH>
+    <TH width=45><FONT color=#f5f5f5>１１</FONT></TH></TR>
+  <TR>
+    <TH width=22 bgColor=#8888ff rowSpan=5><FONT 
+      color=#f5f5f5>鉱<BR>山<BR>レ<BR>ベ<BR>ル</FONT></TH>
+    <TH width=28 bgColor=#ff8888><FONT color=#f5f5f5>１</FONT></TH>
+    <TD><FONT color=#ff0000><B>１</B></FONT></TD>
+    <TD colSpan=10>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>２</FONT></TH>
+    <TD>２</TD>
+    <TD>３</TD>
+    <TD><FONT color=#ff0000><B>４</B></FONT></TD>
+    <TD colSpan=8>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>３</FONT></TH>
+    <TD>３</TD>
+    <TD>５</TD>
+    <TD>７</TD>
+    <TD>８</TD>
+    <TD><FONT color=#ff0000><B>９</B></FONT></TD>
+    <TD colSpan=6>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>４</FONT></TH>
+    <TD>４</TD>
+    <TD>７</TD>
+    <TD>１０</TD>
+    <TD>１２</TD>
+    <TD>１３</TD>
+    <TD>１４</TD>
+    <TD>１５</TD>
+    <TD><FONT color=#ff0000><B>１６</B></FONT></TD>
+    <TD colSpan=3>　</TD></TR>
+  <TR>
+    <TH bgColor=#ff8888><FONT color=#f5f5f5>５</FONT></TH>
+    <TD>５</TD>
+    <TD>９</TD>
+    <TD>１３</TD>
+    <TD>１６</TD>
+    <TD>１８</TD>
+    <TD>２０</TD>
+    <TD>２１</TD>
+    <TD>２２</TD>
+    <TD>２３</TD>
+    <TD>２４</TD>
+    <TD><FONT 
+color=#ff0000><B>２５</B></FONT></TD></TR></TBODY></TABLE>**表の解説**<BR>横軸にある「ターンの進行」とは、採掘したターンからの経過ターン数を指します。縦軸はそのまま鉱山レベルのことです。赤字はそのレベルの最大値で、それ以降はターンが経過しても増えません。<BR>次にこの埋蔵係数を使って鉱山の埋蔵量を算出します。算出方法は埋蔵係数×鉱山係数（とでも言えばいいのか？一応仮名称）。以下は鉱山係数<BR><B>炭坑：１００　採石場：５０　鉄鋼山：１００　ウラン鉱山：１　銀山：５０</B><BR><BR>鉱山で採掘を行うと備蓄されてる物資の約半分を入手となってますが、厳密には、「１」～「埋蔵量－１」の中からランダムで選ばれた量が採掘されます。<BR><BR>
+<HR>
+<FONT size=+1 COLOR="#A900FF"><B>◎災害</B></FONT><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>種類</FONT></TH>
+    <TH><FONT color=#f5f5f5>発生率</FONT></TH>
+    <TH><FONT color=#f5f5f5>村</FONT></TH>
+    <TH><FONT color=#f5f5f5>町</FONT></TH>
+    <TH><FONT color=#f5f5f5>都市</FONT></TH>
+    <TH><FONT color=#f5f5f5>農場</FONT></TH>
+    <TH><FONT color=#f5f5f5>工場</FONT></TH>
+    <TH><FONT color=#f5f5f5>市場</FONT></TH>
+    <TH><FONT color=#f5f5f5>建材</FONT></TH>
+    <TH><FONT color=#f5f5f5>軍事</FONT></TH>
+    <TH><FONT color=#f5f5f5>精製</FONT></TH>
+    <TH><FONT color=#f5f5f5>軍事施設</FONT></TH>
+    <TH><FONT color=#f5f5f5>ハリボテ</FONT></TH>
+    <TH><FONT color=#f5f5f5>効果</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">火災</TD>
+    <TD><FONT color=blue>１０％</FONT></TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">台風</TD>
+    <TD>２％</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>平地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">地震</TD>
+    <TD>１％</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>△</TD>
+    <TD>×</TD>
+    <TD>△</TD>
+    <TD>△</TD>
+    <TD>△</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">不況</TD>
+    <TD>１％</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>○</TD>
+    <TD>×</TD>
+    <TD>×</TD>
+    <TD>荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">津波</TD>
+    <TD>１％</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>○</TD>
+    <TD>荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">噴火</TD>
+    <TD>０．５％</TD>
+    <TD align=middle colSpan=11>全ての地形</TD>
+    <TD>山・荒地・浅瀬</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">隕石</TD>
+    <TD>１％</TD>
+    <TD align=middle colSpan=11>全ての地形</TD>
+    <TD>海</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">巨大隕石</TD>
+    <TD>０％</TD>
+    <TD align=middle colSpan=11>全ての地形</TD>
+    <TD>海・浅瀬・荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">落盤</TD>
+    <TD>０．５％</TD>
+    <TD align=middle colSpan=11>鉱山</TD>
+    <TD>鉱山・山</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">埋蔵金</TD>
+    <TD>０％</TD>
+    <TD align=middle colSpan=11>整地実行時に発見される場合がある</TD>
+    <TD>平地</TD></TR>
+ <TR>
+    <TD bgcolor="#E9E7FF">雨</TD>
+    <TD>１．５％</TD>
+    <TD align=middle colSpan=11>森林・平地</TD>
+    <TD>森林・荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">油田事故</TD>
+    <TD>１％</TD>
+    <TD align=middle colSpan=11>油田</TD>
+    <TD>荒地</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">地盤沈下</TD>
+    <TD>３０％</TD>
+    <TD align=middle colSpan=11>海に隣接した地形</TD>
+    <TD>浅瀬</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">怪獣</TD>
+    <TD>０．０５％／ヘクス</TD>
+    <TD align=middle colSpan=11>街系</TD>
+    <TD>怪獣</TD></TR></TBODY></TABLE>津波・台風・地震で、個々の施設が破壊される確率はデフォルトです｡<BR>不況は､対象となる施設が４分の１の確率で破壊されます｡<BR>地盤沈下のボーダーは､１００００万坪です。<BR><BR><FONT 
+size=+1 COLOR="#A900FF"><B>怪獣</B></FONT><BR>
+<BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>種類</FONT></TH>
+    <TH><FONT color=#f5f5f5>体力</FONT></TH>
+    <TH><FONT color=#f5f5f5>能力</FONT></TH>
+    <TH><FONT color=#f5f5f5>死骸</FONT></TH>
+    <TH><FONT color=#f5f5f5>経験値</FONT></TH>
+    <TH><FONT color=#f5f5f5>人口</FONT></TH>
+    <TH><FONT color=#f5f5f5>出現率</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ベビーいのら</TD>
+    <TD>１</TD>
+    <TD>特になし</TD>
+    <TD>１００</TD>
+    <TD>５</TD>
+    <TD>１２万人</TD>
+    <TD>５</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">いのら</TD>
+    <TD>１～３</TD>
+    <TD>特になし</TD>
+    <TD>３００</TD>
+    <TD>１０</TD>
+    <TD>２０万人</TD>
+    <TD>１０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">サンジラ</TD>
+    <TD>２～３</TD>
+    <TD>偶数ターン硬化</TD>
+    <TD>４００</TD>
+    <TD>１５</TD>
+    <TD>２０万人</TD>
+    <TD>１０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">レッドいのら</TD>
+    <TD>３～５</TD>
+    <TD>特になし</TD>
+    <TD>８００</TD>
+    <TD>２０</TD>
+    <TD>２８万人</TD>
+    <TD>１５</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ダークいのら</TD>
+    <TD>２～４</TD>
+    <TD>移動力２</TD>
+    <TD>１０００</TD>
+    <TD>２０</TD>
+    <TD>２８万人</TD>
+    <TD>１５</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">いのらゴースト</TD>
+    <TD>２</TD>
+    <TD>移動力不定</TD>
+    <TD>５００</TD>
+    <TD>１０</TD>
+    <TD>２８万人</TD>
+    <TD>５</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">クジラ</TD>
+    <TD>４～６</TD>
+    <TD>奇数ターン硬化</TD>
+    <TD>１５００</TD>
+    <TD>３０</TD>
+    <TD>３６万人</TD>
+    <TD>１０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">キングいのら</TD>
+    <TD>６～８</TD>
+    <TD>特になし</TD>
+    <TD>２５００</TD>
+    <TD>４０</TD>
+    <TD>３６万人</TD>
+    <TD>２０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">ゴッドいのら</TD>
+    <TD>９</TD>
+    <TD>移動力２</TD>
+    <TD>４０００</TD>
+    <TD>５０</TD>
+    <TD>４４万人</TD>
+    <TD>１０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">メカいのら</TD>
+    <TD>４</TD>
+    <TD>特になし</TD>
+    <TD>０</TD>
+    <TD>１５</TD>
+    <TD>０</TD>
+    <TD>０</TD></TR></TBODY></TABLE><BR>
+<HR>
+<FONT size=+1 COLOR="#A900FF"><B>◎その他</B></FONT><BR>
+<TABLE borderColor=#00AFA1 cellSpacing=0 bgColor=#E5F9FF border=1>
+  <TBODY>
+  <TR bgColor=#8888ff height=38>
+    <TH><FONT color=#f5f5f5>レベル</FONT></TH>
+    <TH><FONT color=#f5f5f5>ミサイル基地</FONT></TH>
+    <TH><FONT color=#f5f5f5>海底基地</FONT></TH></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">１</TD>
+    <TD>０</TD>
+    <TD>０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">２</TD>
+    <TD>１０</TD>
+    <TD>２０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">３</TD>
+    <TD>３０</TD>
+    <TD>６０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">４</TD>
+    <TD>６０</TD>
+    <TD>１２０</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">５</TD>
+    <TD>１００</TD>
+    <TD>２００</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">６</TD>
+    <TD>１５０</TD>
+    <TD>―</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">７</TD>
+    <TD>２１０</TD>
+    <TD>―</TD></TR>
+  <TR>
+    <TD bgcolor="#E9E7FF">８</TD>
+    <TD>２５５（最大）</TD>
+    <TD>―</TD></TR></TBODY></TABLE><BR><FONT 
+size=+1 COLOR="#A900FF"><B>フェイズ</B></FONT><BR>収入→コマンド→ヘクス処理→全体災害<BR>
+<HR>
+<a href="#top">【ローカルルール】</a><a href="#Js">【Ｊｓ版追加事項】</a><a href="#com">【コマンド説明】</a></BODY></HTML>

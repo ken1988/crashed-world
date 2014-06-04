@@ -1,0 +1,21 @@
+/* ‹¤’Ê ------------------------------------------------------------*/
+@charset "UTF-8";
+body {
+	color		: #8B0000;
+	background:url('atm/atm_background.png') no-repeat;
+}
+
+a {
+	color		: #CD5C5C;
+	text-decoration	: none;
+}
+a:visited {
+	color		: #DEB887;
+}
+a:active {
+	color		: #F08080;
+}
+a:hover {
+	color		: #F08080;
+	background-color: #FFDAB9;
+}

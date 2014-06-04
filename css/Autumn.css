@@ -1,0 +1,373 @@
+﻿
+/********************************************************************/
+/*  Edited By : Watson                                              */
+/********************************************************************/
+
+/* 共通 ------------------------------------------------------------*/
+body {
+	font-family	: "MS UI Gothic", sans-serif;
+	font-size	: 10pt;
+}
+hr {
+	border		: solid #A0522D;
+	border-width	: 1px 0px 0px 0px;
+}
+table {
+	border		: none;
+}
+th, td {
+	color		: #8B0000;
+	border		: solid #FFA07A 1px;
+	font-size	: 10pt;
+
+}
+th {
+	border-color	: #A0522D;
+}
+td.M {
+	padding-top	: 10pt;
+	border		: none;
+}
+img {
+	border		: none;
+}
+#islandInfo .big,
+#CommentBox .big,
+#localBBS .big,
+#RecentlyLog .big,
+h2 {
+	display		: block;
+	text-align	: left;
+	text-transform	: uppercase;
+	background-image: url('atm/atm_mmji.gif');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding-left	: 20px;
+	font-size	: 14pt;
+	font-weight	: bold;
+	color		: #CD5C5C;
+	border		: solid #8B4513;
+	border-width	: 0px 0px 2px 0px;
+	width		: 300px;
+}
+h2.lastModified{
+	font-size	: 90%;
+	background-image: none;
+	width		: 100%;
+	padding		: 0px;
+}
+
+option, input:focus {
+	background-color: #FFE4C4;
+}
+
+#LinkHeader ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width:auto;
+   height: 22px;
+}
+#LinkHeader li {
+   float: left; /* リスト項目を横方向に並べる */
+   margin:0 1px 0 0;
+   width:125px;
+}
+#LinkHeader li a {
+   display:block;
+   color:#fff;
+   text-decoration:none;
+   padding:1px 1px 1px 5px;
+   height: 22px;
+
+   background:transparent url('atm/foxmenu_bg-OFF.gif') no-repeat top left;
+}
+#LinkHeader li a:hover {
+   color:#fff;
+   background:transparent url('atm/foxmenu_bg-OVER.gif') no-repeat top left;
+}
+
+#LinkFoot {
+	clear:both;
+	background-color: #FFF5EE;
+	border		: dashed #F5DEB3 1px;
+	width:27%;
+	margin-left	: 25%;
+	padding		: 5px;
+}
+
+
+#Loginbox {
+        background:url('atm/Loginback.png') no-repeat;
+	width: 420px;
+	height:130px;
+	padding:0px
+}
+#login {
+	float: left;
+	width:50%;
+	padding:10px
+}
+#Register {
+	float: right;
+	width:30%;
+	padding:10px
+}
+#IslandView {
+	clear:both;
+	width:900px;
+}
+/**********************************************************************/
+
+/* TOPページ ---------------------------------------------------------*/
+/* ターン数関係 */
+h2.Turn {
+	position	: relative;
+	left		: 0%;
+	background-image: url('atm/atm_icyo.gif');
+	background-repeat: no-repeat;
+	background-position: 99% 0;
+	height		: 50px;
+	border		: dashed #F5DEB3 1px;
+	width		: 30%;
+	margin-bottom	: 1em;
+	font-size	: 16pt;
+}
+#nexttime {
+	position	: relative;
+	top		: -50px;
+	left		: 50%;
+	padding-left	: 2em;
+}
+#HistoryLog, #RecentlyLog {
+	white-space	: nowrap;
+}
+#HakoniwaCup {
+	white-space	: nowrap;
+}
+/* タイトル */
+h1 {
+	position	: relative;
+	top		: 60px;
+	left		: 50px;
+	background	: url('atm/atm_bg_title.gif') no-repeat;
+	background-position: 96% 50%;
+	margin-bottom	: 80px;
+	font-family	: "Times New Roman", sans-serif;
+	font-size	: 38pt;
+
+	font-style	: italic;
+	color		: #8B0000;
+	border		: double #CD853F;
+	border-width	: 0px 0px 5px 0px;
+	width		: 400px;
+}
+/* 大きい文字 */
+.big {
+	font-size	: 24pt;
+}
+.clear { clear:both; }  
+.clear hr { display:none; }  
+/**********************************************************************/
+
+/* Mapページ ---------------------------------------------------------*/
+#NaviView{
+	z-index		: 1;
+	background-color: #F0FFFF;
+	border		: groove #4169E1;
+	border-width	: 3px;
+	width		: auto;
+	min-width	:180px;
+	padding		: 3px;
+	text-align	: left;
+  	opacity		:0.9;
+   	position	:absolute;
+   	display		:none;
+}
+#NaviTitle {
+	font-size	: 12pt;
+	border-style	: solid;
+	border-color	: #000080;
+	border-width	: 0 0 2px 0;
+}
+.NaviImg {
+	margin		: 5px;
+}
+.NaviText {
+	margin-left	: 15px;
+}
+#islandMap, #islandMap table {
+	margin-left	: auto;
+	margin-right	: auto;
+	width: 670px;
+	height: 660px;
+}
+#islandInfo table,
+#CommentBox table,
+#localBBS table
+{
+	width		: 100%;
+}
+#islandInfo th,
+#CommentBox th,
+#localBBS th
+{
+	background-color: #FFA07A;
+}
+#localBBS center {
+	text-align	: left;
+}
+
+
+.islName, .islName2, .capName, .number, .head, .headToTo, .command, .disaster, .lbbsSS, .lbbsOW,
+.money, .food, .HCwin, .HClose, .attention, .bumon { font-weight: bold; }
+.islName   { color: #A06040;        } /* 島の名前など */
+.islName2  { color: #808080;        } /* 薄くなった島の名前 */
+.capName   { color: #990000;		} /*首都名*/
+.number    { color: #800000;        } /* 順位の番号など */
+.head      { color: #800000;        } /* 順位表における見だし */
+.headToTo  { color: #E9967A;        } /* toto表における見だし */
+.command   { color: #D08000;        } /* 開発計画名 */
+.disaster  { color: #FF0000;        } /* 災害 */
+.lbbsST    { color: gray;           } /* 観光者通信（極秘） */
+.money     { color: #daa520;      } /* お金 */
+.food      { color: #8B4513;        } /* 食料 */
+.HCwin     { color: #0000FF;        } /* 箱庭カップ勝利 */
+.HClose    { color: #A06040;        } /* 箱庭カップ敗北 */
+.attention { color: #FF0000;        } /* 注意 */
+.bumon     { color: #FFFFFF;        } /* ランキングの部門名 */
+.point     { color: #CD853F;        } /* point */
+.unemploy1 { color: #CD853F;        } /* 失業率- */
+.unemploy2 { color: red;            } /* 失業率+ */
+.shuto     { color: #8B4513;        } /* 首都名，ユニーク地形 */
+.house     { color: #fa8072;         } /* 島主の家，島ID */
+.eisei     { color: #CD853F;        } /* 人工衛星 */
+.monsm     { color: #8B4513;        } /* 怪獣出現中！，成長率 */
+.normal    { color: #000000;        } /* 通常の文字色 */
+
+/* 背景色 */
+.TitleCell   { background-color: #F4A460;        } /* 順位表見出し */
+.NumberCella  { background-color: #F8DBA8;        }
+.NumberCellb  { background-color: #F6C362;        }
+.NumberCellc  { background-color: #F7CB7A;        }
+.NumberCelld  { background-color: #F4A460;        }
+.NameCell    { background-color: #F5DEB3;        } /* 順位表島の名前 */
+.InfoCell    { background-color: #FAEBD7; text-align: right;       } /* 順位表島の情報 */
+.TenkiCell   { background-color: #FAEBD7; text-align: center;       } /* 順位表島の情報 */
+.ItemCell    { background-color: #FAEBD7; text-align: left;       } /* 順位表島の情報 */
+.CommentCell { background-color: #FFFFFF; text-align: left;       } /* 順位表コメント欄 */
+.InputCell   { background-color: #FFDAB9;        } /* 開発計画フォーム */
+.MapCell     { background-color: #FFFFFF;        } /* 開発計画地図 */
+.CommandCell { background-color: #FFFFFF;        } /* 開発計画入力済み計画 */
+.PoinCell    { background-color: #ffe4b5;       } /* Point欄 */
+.TotoCell    { background-color: white;          } /* toto欄 */
+.RankingCell { background-color: #b0c4de; } /* ランキング欄 */
+.PopupCell   { background-color: #E0FFFF;        } /* Popup コマンド入力欄 */
+
+
+td.prevnat{
+   height: 57px;
+   width: 700px;
+   padding: 0;
+   margin: 0;
+   background:transparent url('atm/data_back.png') repeat-x top left;
+}
+
+.prevnat ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width:auto;
+}
+
+.prevnat li {
+   float: left; /* リスト項目を横方向に並べる */
+   margin:0 0px 0 0;
+   width:40px;
+   display:block;
+   text-decoration:none;
+   height: 57px;
+  
+}
+
+.prevnat li a{
+   display:block;
+   text-decoration:none;
+   height: 57px;
+   padding:3px 0px 0px 0px;
+   text-align:center;
+}
+
+.prevnat li a:hover{
+   background:transparent url('atm/data_OVER.png') no-repeat top left;	
+}
+.databox{
+	display: none;
+}
+/* JSコマンド送信済み */
+.commandjs1  {
+	border-width	: 0px;
+	color		: #8B4513;
+	width		: 100%;
+	background-color: #fff;
+}
+/* JSコマンド未送信 */
+.commandjs2  {
+	border-width	: 0px;
+	color		: red;
+	width		: 100%;
+	background-color: #FFFFFF;
+}
+#menu {
+	position:absolute;
+	display:none;
+}
+div.tooltip {
+	height: 50px;
+	width: auto;
+	background:url("atm/datas_back_l.png") no-repeat left top,url("atm/datas_back_r.png") no-repeat right top;
+}
+div.tooltip table{
+	margin:0px;
+	padding:0px 0px 0 15px;
+}
+div.tooltip td{
+	margin:0px;
+	padding:0px;
+}
+div.tooltip p{
+	line-height:1.5;
+	height: 50px;
+	margin:0px;
+	padding:5px 0px 0 15px;
+}
+#comm{
+	line-height:1.1;
+}
+div.tooltip img{
+	vertical-align: top;
+}
+div.tooltip span{
+	margin:0px;
+	padding: 0px 3px 0px 0px;
+	border:1px solid #f00;
+}
+.datacel {
+	height: 50px;
+	width: 700px;
+}
+.visualize {
+	margin-top:30px;
+	margin-bottom:40px;
+	margin-left:50px;
+}
+
+.new {
+	color		: #f00;
+	background-color: transparent;
+}
+/* 怪獣出没数 */
+.monster{
+	font-size	: 8pt;
+	color		: #f00;
+}

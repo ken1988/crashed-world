@@ -1,0 +1,77 @@
+・*=============================================
+デフォルト設定をリセットする
+============================================*/
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd,p,
+header,hgroup,section,article,aside,footer,figure,figcaption,nav {
+margin: 0;
+padding: 0;
+font-size: 100%;
+}
+
+body {
+line-height: 1.0;
+-webkit-text-size-adjust:none;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary{
+display: block;
+}
+
+img {
+border: 0;
+vertical-align: bottom;
+}
+
+ul,ol{
+list-style: none;
+}
+
+table{
+border-spacing: 0;
+empty-cells: show;
+}
+
+/*============================================
+サイト全体の設定
+============================================*/
+body {
+font-family: Arial,san-serif;
+font-size: 14px;
+line-height: 1.0;
+}
+
+.block {
+height: 50px;
+padding-left: 5px;
+margin-right: 5px;
+margin-bottom: 1px;
+border: 1px solid #FF6600;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+background:url('nation-back.png') no-repeat;
+}
+
+.block p{
+padding-left: 5px;
+}
+
+.block-heading{
+padding-left: 10px;
+font-size: 16px;
+}
+
+.image-left{
+margin-left: 5px;
+margin-top: 10px;
+}
+
+#login select{
+height: 50px;
+}
+#login input{
+height: 50px;
+}
+#login_button{
+height: 150px;
+}
