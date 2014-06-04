@@ -540,25 +540,37 @@ class Init {
   var $landForest	=  4; // 森
   var $landMountain =  5; // 山
   var $landPoll     =  6; // 汚染土壌
-
+  var $landOil		=  7; // 海底油田
   var $landFarm		=  8; // 農場
+  var $landSfarm	=  9; // 海底農場→廃止予定
+  var $landNursery  = 10; // 養殖場
   var $landMarket	= 11; // 市場
   var $landFactory	= 12; // 工場
   var $landMFactory	= 13; // 建材工場
   var $landSFactory	= 14; // 砲弾工場
+  var $landFFactory	= 15; // 精製工場
   var $landHatuden  = 16; // 発電所
+  var $landFusya    = 17; // 風車
   var $landSecpol  = 18; // 秘密警察
+  var $landFBase = 19; // 他国軍基地
+  var $landBank     = 20; // 銀行→廃止予定
+  var $landBase		= 21; // ミサイル基地
   var $landHBase	= 22; // 偽装ミサイル基地
+  var $landSbase	= 23; // 海底基地→廃止予定
+  var $landHaribote	= 24; // ハリボテ
+  var $landDefence	= 25; // 防衛施設(非偽装)
   var $landHDefence	= 26; // 防衛施設(偽装)
   var $landSdefence = 27; // 海底防衛施設
   var $landNewtown	= 28; // ニュータウン
   var $landBigtown	= 29; // 現代都市
   var $landProcity  = 30; // 防災都市
+  var $landSeaCity  = 31; // 海底都市→廃止予定
   var $landPark     = 32; // 遊園地
   var $landPort     = 33; // 港
   var $landMonument	= 34; // 記念碑
   var $landZorasu   = 35; // 揚陸艦
   var $landMonster  = 36; // 怪獣
+  var $landSleeper  = 37; // 怪獣（睡眠中）→廃止予定
   var $landMyhome   = 38; // 行政府
   var $landnMountain = 39; //鉱山が作れない山
   var $landSeeCity	 = 40; //観光都市
@@ -569,7 +581,9 @@ class Init {
   // 地形番号50以上は鉱山系
   var $landStonemine = 50; // 採石場
   var $landSteel     = 51; // 鉄鉱山
+  var $landCoal      = 52; // 炭坑
   var $landUranium   = 53; // ウラン鉱山
+  var $landSilver    = 54; // 銀鉱山
   /********************
        コマンド
    ********************/
@@ -595,7 +609,9 @@ class Init {
   var $comPrepare	= 1; // 整地
   var $comPrepare2	= 2; // 地ならし
   var $comReclaim	= 3; // 埋め立て
+  var $comReclaim2	= 4; // 造成（急速埋め立て）
   var $comDestroy	= 5; // 掘削
+  var $comDestroy2	= 6; // 連続掘削
   var $comSellTree	= 7; // 伐採
   var $comVein      = 8; // 鉱脈探査
   var $comMine      = 9; // 鉱山整備
@@ -604,13 +620,13 @@ class Init {
   // 作る系
   var $comPlant		= 11; // 植林
   var $comFarm		= 12; // 農場整備
-
+  var $comNursery   = 13; // 養殖場設置
   var $comMarket	= 14; // 市場整備
   var $comFactory	= 15; // 工場建設
   var $comSFactory	= 16; // 専門工場建設
   var $comHatuden   = 17; // 発電所
   var $comOild	    = 18; // 油田整備
-
+  var $comFusya     = 19; // 農業改良センター設置
   var $comBase		= 20; // ミサイル基地建設
   var $comDbase		= 21; // 防衛施設建設
   var $comSdbase    = 22; // 海底防衛施設
@@ -628,19 +644,19 @@ class Init {
   var $comCapital	 = 34; //首都建設
   var $comIndCity	 = 35; //工業都市建設
   var $comSecpol	 = 36; //秘密警察建設
-
+  var $comFBase 	 = 37; //他国軍基地建設
   
   // 製造系(島全体)
   var $comMkShell     = 41; // 砲弾製造
   var $comMkMaterial  = 42; // 建材製造
-
+  var $comMkSteel     = 43; // 建材強化
 
   // 発射系
   var $comMissileNM	 = 51; // ミサイル発射
   var $comMissilePP	 = 52; // PPミサイル発射
   var $comMissileSPP  = 53; // SPPミサイル発射
   var $comMissileBT	 = 54; // BTミサイル発射
-
+  var $comMissileSP	 = 55; // 催眠弾発射→廃止予定
   var $comMissileLD	 = 56; // 陸地破壊弾発射
   var $comEisei      = 57; // 人工衛星発射
   var $comEiseimente    = 58; // 人工衛星発修復
@@ -653,13 +669,13 @@ class Init {
   var $comMoney     = 71; // 送金
   var $comFood      = 72; // 食料輸送
   var $comGoods     = 73; // 商品輸送
-
+  var $comAlcohol   = 74; // 酒輸送
   var $comWood      = 75; // 木材輸送
   var $comStone     = 76; // 石材輸送
-  var $comSteel     = 77; // 鉄輸送
+  var $comSteel     = 77; // 鉄鋼輸送
   var $comMaterial  = 78; // 建材輸送
   var $comSilver    = 79; // 銀輸送
-
+  var $comOil       = 80; // 石油輸送
   var $comFuel      = 81; // 燃料輸送
   var $comShell     = 82; // 砲弾輸送
 
