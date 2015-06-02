@@ -4,7 +4,7 @@
   箱庭諸島２ for PHP
 
   - 初期設定用ファイル -
-  
+
   $Id: config.php,v 1.7 2003/09/29 11:54:19 Watson Exp $
 
 *******************************************************************/
@@ -16,41 +16,41 @@ class Init {
   // 各種設定値
   //----------------------------------------
   // プログラムを置くディレクトリ
-  var $baseDir		= "http://tanstafl.sakura.ne.jp/trade";
+  var $baseDir		= "http://crashed.crap.jp/";
 
   // 画像を置くディレクトリ
-  var $imgDir		= "http://tanstafl.sakura.ne.jp/trade/img";
+  var $imgDir		= "http://crashed.crap.jp/img";
 
   // ローカル設定用画像
-  var $imgPack          = "http://tanstafl.sakura.ne.jp/trade/img.lzh";
+  var $imgPack          = "http://crashed.crap.jp/img.lzh";
   // ローカル設定説明ページ
-  var $imgExp           = "http://tanstafl.sakura.ne.jp/trade/local.html";
+  var $imgExp           = "http://crashed.crap.jp/local.html";
 
   // CSSファイルを置くディレクトリ
-  var $cssDir		= "http://tanstafl.sakura.ne.jp/trade/css";
+  var $cssDir		= "http://crashed.crap.jp/css";
 
   // CSSリスト
   var $cssList		= array('Autumn.css');
-  
+
   //パスワードの暗号化 true: 暗号化、false: 暗号化しない
-  var $cryptOn		= true; 
+  var $cryptOn		= true;
   // マスターパスワード
   var $masterPassword	= "63810";
   var $specialPassword	= "63810";
-  
+
   // データディレクトリの名前
   var $dirName		= "data";
 
   // ゲームタイトル
-  var $title		= "新貿易版箱庭諸国";
+  var $title		= "箱庭墜落世界";
 
   var $adminName	= "TRT";
   var $adminEmail	= "novilen.gov@gmail.com";
-  var $urlBbs		= "http://tanstafl.sakura.ne.jp/modules/d3forum/";
-  var $urlTopPage	= "http://tanstafl.sakura.ne.jp/";
-  var $urlManual	= "http://tanstafl.sakura.ne.jp/modules/xpwiki/?%A5%DE%A5%CB%A5%E5%A5%A2%A5%EB";
-  var $urlHowTo		= "http://tanstafl.sakura.ne.jp/modules/xpwiki/?%CB%C7%B0%D7%BD%C5%BB%EB%B7%BF%A1%DC%A3%D3%A3%C5%A1%A1%B7%D0%B1%C4%B9%D6%BA%C2";
-  
+  var $urlBbs		= "http://crashed.crap.jp/moin/";
+  var $urlTopPage	= "http://crashed.crap.jp/";
+  var $urlManual	= "http://crashed.crap.jp/moin/users_manual";
+  var $urlHowTo		= "http://crashed.crap.jp/moin/tips";
+
   // ディレクトリ作成時のパーミション
   var $dirMode		= 0777;
 
@@ -71,7 +71,7 @@ class Init {
   var $maxIsland	= 40;
 
   // TOPページに一度に表示する島の数(0なら全島表示)
-    var $islandListRange = 15;
+    var $islandListRange = 20;
   // 資金表示モード
   var $moneyMode	= true; // true: 100の位で四捨五入, false: そのまま
   // トップページに表示するログのターン数
@@ -80,9 +80,9 @@ class Init {
   var $logMax		= 42;
 
   // バックアップを何ターンおきに取るか
-  var $backupTurn	= 2;
+  var $backupTurn	= 4;
   // バックアップを何回分残すか
-  var $backupTimes	= 6;
+  var $backupTimes	= 10;
 
   // 発見ログ保持行数
   var $historyMax	= 15;
@@ -91,7 +91,7 @@ class Init {
   var $giveupTurn	= 360;
 
   // コマンド入力限界数
-  var $commandMax	= 50;
+  var $commandMax	= 40;
 
   // ローカル掲示板行数を使用するかどうか(false:使用しない、true:使用する)
   var $useBbs		= true;
@@ -106,13 +106,13 @@ class Init {
   // 他島のローカル掲示板に発言するための費用(0:無料)
   var $lbbsMoneyPublic =   0; // 公開
   var $lbbsMoneySecret =  100; // 極秘
-  
+
   //定期輸送の最大本数
-  var $regTMax	= 20;
+  var $regTMax	= 5;
   //定期輸送の1次最大本数
-  var $regTsMax = 10;
+  var $regTsMax = 2;
   //定期輸送の最低期間
-  var $regTTerm	= 36;
+  var $regTTerm	= 18;
   // 島の大きさ
   var $islandSize	= 20;
 
@@ -281,9 +281,9 @@ class Init {
   var $maxAlcohol	= 100000;
     // 石油最大値
   var $maxOil		= 100000;
-  
+
   var $allmax;
-  
+
   // 人口の単位
   var $unitPop		= "人";
   // 広さの単位
@@ -330,7 +330,7 @@ class Init {
   var $HappinessDemand	  =array(30,40,55,70);#要求幸福度（後進国、発展途上国、中進国、先進国）
   var $InvestDemand	  =array(10,15,50,65);#要求投資率（後進国、発展途上国、中進国、先進国）
   var $DemoPop			  = 10000;#議事堂要求人口
-  
+
   //産業定数
   var $BaseIndust	=array(30,80,15);#工業、農業、商業（利用時は100分の1）
   //原料消費量計算
@@ -349,7 +349,7 @@ class Init {
   var $noAssist     = 20; // これより前には実行が許可されない
   // リミッター発動人口
   var $limitpop     = 1000; // これより人口が少ないと許可されない
-  
+
   // 複数地点へのミサイル発射を可能にするか？1:Yes 0:No
   var $multiMissiles = 0;
 
@@ -418,7 +418,7 @@ class Init {
   var $disMonsBorder3 = 6000;  // 人口基準3(怪獣レベル3)
   var $disMonster     = 0.5;    // 単位面積あたりの出現率(0.01%単位)
 
-  var $monsterLevel1  = 2; // サンジラまで    
+  var $monsterLevel1  = 2; // サンジラまで
   var $monsterLevel2  = 5; // いのらゴーストまで
   var $monsterLevel3  = 6; // かおくと（♀）まで
 
@@ -478,7 +478,7 @@ class Init {
   var $EiseiName = array (
     '気象衛星', '観測衛星', '迎撃衛星', '軍事衛星', '防衛衛星', 'イレギュラー'
     );
-  
+
   var $Captext = array('なし','原始的','未成熟','発展途上','地方分権/先進的','中央集権/先進的');
 
   /********************
@@ -542,54 +542,41 @@ class Init {
   var $landPoll     =  6; // 汚染土壌
   var $landOil		=  7; // 海底油田
   var $landFarm		=  8; // 農場
-  var $landSfarm	=  9; // 海底農場→廃止予定
-  var $landNursery  = 10; // 養殖場
-  var $landMarket	= 11; // 市場
-  var $landFactory	= 12; // 工場
-  var $landMFactory	= 13; // 建材工場
-  var $landSFactory	= 14; // 砲弾工場
-  var $landFFactory	= 15; // 精製工場
-  var $landHatuden  = 16; // 発電所
-  var $landFusya    = 17; // 風車
-  var $landSecpol  = 18; // 秘密警察
-  var $landFBase = 19; // 他国軍基地
-  var $landBank     = 20; // 銀行→廃止予定
-  var $landBase		= 21; // ミサイル基地
-  var $landHBase	= 22; // 偽装ミサイル基地
-  var $landSbase	= 23; // 海底基地→廃止予定
-  var $landHaribote	= 24; // ハリボテ
-  var $landDefence	= 25; // 防衛施設(非偽装)
+  var $landNursery  =  9; // 養殖場
+  var $landMarket	= 10; // 市場
+  var $landFactory	= 11; // 工場
+  var $landFFactory	= 12; // 養豚場
+  var $landHatuden  = 13; // 発電所
+  var $landSecpol   = 14; // 秘密警察
+  var $landFBase    = 15; // 他国軍基地
+  var $landBank     = 16; // 銀行
+  var $landBase		= 17; // ミサイル基地
   var $landHDefence	= 26; // 防衛施設(偽装)
   var $landSdefence = 27; // 海底防衛施設
   var $landNewtown	= 28; // ニュータウン
   var $landBigtown	= 29; // 現代都市
   var $landProcity  = 30; // 防災都市
-  var $landSeaCity  = 31; // 海底都市→廃止予定
   var $landPark     = 32; // 遊園地
   var $landPort     = 33; // 港
   var $landMonument	= 34; // 記念碑
   var $landZorasu   = 35; // 揚陸艦
   var $landMonster  = 36; // 怪獣
-  var $landSleeper  = 37; // 怪獣（睡眠中）→廃止予定
   var $landMyhome   = 38; // 行政府
   var $landnMountain = 39; //鉱山が作れない山
-  var $landSeeCity	 = 40; //観光都市
   var $landCapital	 = 41; //首都
   var $landIndCity = 42; //工業都市
-  var $landNPark	= 43; //国立公園
+
 
   // 地形番号50以上は鉱山系
   var $landStonemine = 50; // 採石場
   var $landSteel     = 51; // 鉄鉱山
   var $landCoal      = 52; // 炭坑
-  var $landUranium   = 53; // ウラン鉱山
-  var $landSilver    = 54; // 銀鉱山
   /********************
        コマンド
    ********************/
   // コマンド分割
   // このコマンド分割だけは、自動入力系のコマンドは設定しないで下さい。
-  var $commandDivido = 
+  var $commandDivido =
 	array(
 	'開発,0,10',  // 計画番号00～10
 	'建設,11,40', // 計画番号11～40
@@ -645,7 +632,7 @@ class Init {
   var $comIndCity	 = 35; //工業都市建設
   var $comSecpol	 = 36; //秘密警察建設
   var $comFBase 	 = 37; //他国軍基地建設
-  
+
   // 製造系(島全体)
   var $comMkShell     = 41; // 砲弾製造
   var $comMkMaterial  = 42; // 建材製造
@@ -701,10 +688,10 @@ class Init {
   // 島の座標数
   var $pointNumber;
 
-  
+
   //首都レベル依存リスト
   var $comGovernment;
-  
+
   //最大人口値
   var $maxLPop;
   // 周囲2ヘックスの座標
@@ -1021,7 +1008,7 @@ class Init {
     $this->comCost[$this->comAutoDelete]   = 0;
     $this->comSCost[$this->comAutoDelete]  = 0;
 
-	 
+
 	 //ゲージ表示のために最大保有数を連想配列化
 	 $this->allmax = Array('money'=>$this->maxMoney,
 	  'food'=>$this->maxFood,
@@ -1034,7 +1021,7 @@ class Init {
 	  'silver'=>$this->maxSilver,
 	  'steel'=>$this->maxSteel,
 	  'oil'=>$this->maxOil);
-	  
+
 	 $this->comGovernment = array(
 	  $init->comTrain => '1',
       $this->comMissileNM=>'1',
@@ -1047,7 +1034,7 @@ class Init {
       $this->comEiseimente=>'4',
       $this->comEiseiAtt=>'4',
       $this->comEiseiLzr=>'4');
-	  
+
 	 $this->maxLPop = array(
 	$this->landTown    => array(190,500),
 	$this->landNewtown => array(350,350),
@@ -1082,7 +1069,7 @@ class Init {
 		'bgMapCell'=>$this->bgMapCell,
 		'bgCommandCell'=>$this->bgCommandCell
 	);
-  
+
   }
 
   function Init() {

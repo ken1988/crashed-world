@@ -202,7 +202,7 @@ class Util {
 	  }
 	  if($mode == 0){
 	  //フルセット
-	  	$calendars = "フリューゲル暦 ". $turn. "期<br>". $year. "年 ". $month. "月".$term;
+	  	$calendars = "墜星暦 ". $turn. "期<br>". $year. "年 ". $month. "月".$term;
 	  }elseif($mode == 2){
 	  	$calendars = $year. "年 ". $month. "月";
 	  }else{

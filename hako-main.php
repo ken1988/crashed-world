@@ -22,7 +22,7 @@ define("READ_LINE", 1024);
 $THIS_FILE =  $init->baseDir . "/hako-main.php";
 $BACK_TO_TOP = "<A HREF=\"{$THIS_FILE}?\">{$init->tagBig_}トップへ戻る{$init->_tagBig}</A>";
 $_TURN; // ターン数
-$PRODUCT_VERSION = '0.85';
+$PRODUCT_VERSION = '1.00';
 
 //--------------------------------------------------------------------
 class Hako extends HakoIO {
